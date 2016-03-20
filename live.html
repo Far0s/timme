@@ -220,7 +220,7 @@ $(document).ready(function() {
   var keyA = 65,
       keyZ = 90,
       keyE = 69,
-      KeyR = 82;
+      keyR = 82;
   // init : -> turn Seb/JS/Cam rows green
   $('.scenario-init').addClass('table-success');
   // $('table button').on('click', function(){
@@ -252,6 +252,14 @@ $(document).ready(function() {
     var press = e.keyCode;
     if (press === keyE) {
       $('.scenario-step2 td:last-of-type').html('<span class="label label-pill label-warning">a badgé après l\'appel</span>');
+    }
+  });
+
+  // Next Step ! -> absences-ajustifier.html
+  $(document).on('keydown', function(e) {
+    var press = e.keyCode;
+    if (press === keyR) {
+      location.href = 'absences-ajustifier.html';
     }
   });
 });
