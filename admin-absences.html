@@ -60,26 +60,116 @@
             <!-- Sub navbar - for Timme categories -->
             <nav class="navbar navbar-light bg-faded">
               <div class="nav navbar-nav">
-                <a class="nav-item nav-link" href="index.html">Dashboard</a>
-                <a class="nav-item nav-link active" href="absences.html">Absences<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="promotions.html">Promotions</a>
-              </nav>
+                <a class="nav-item nav-link" href="admin-index.html">Dashboard</a>
+                <a class="nav-item nav-link active" href="admin-absences.html">Absences <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="admin-promotions.html">Promotions</a>
+              </div>
+            </nav>
 
-              <div class="container-fluid">
-                <div class="row">
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item">
-                      <a class="nav-link active" data-toggle="tab" href="#todo" role="tab">A examiner</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#historique" role="tab">Historique</a>
-                    </li>
-                  </ul>
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#todo" role="tab">A examiner</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#historique" role="tab">Historique</a>
+                  </li>
+                </ul>
 
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                    <div class="tab-pane active" id="todo" role="tabpanel">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="todo" role="tabpanel">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Promotion</th>
+                          <th>Nom de famille</th>
+                          <th>Prénom</th>
+                          <th>Date</th>
+                          <th>Cours</th>
+                          <th>Justificatif</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>P2019 G2</td>
+                          <td>Sébastien</td>
+                          <td>Dancer-Michel</td>
+                          <td>14/03/16</td>
+                          <td>Ingiénerie informatique</td>
+                          <td>
+                            <button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button>
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">Absence - Sébastien Dancer-Michel</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div><strong>Date :</strong> 14/03/16</div>
+                                    <div><strong>Heure :</strong> 9h - 12h</div>
+                                    <div><strong>Cours :</strong> Ingiénerie informatique</div>
+                                    <div><strong>Commentaire de l'intervenant concernant le cours :</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eius rerum veritatis beatae ducimus, vero deleniti cumque vitae distinctio.</div>
+                                    <div><strong>Justificatif :</strong>
+                                      <img src="https://unsplash.it/560/800/?random" class="img-fluid center-block" alt="justificatif">
+                                    </div>
+                                    <div><strong>Commentaire de l'élève :</strong>
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam sit voluptatibus deserunt praesentium quibusdam rem doloremque repellat nihil eum totam autem facere officia eaque provident vitae, consequuntur iusto possimus aliquid.</p>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                      <button type="button" class="btn btn-danger" data-dismiss="modal">Rejeter</button>
+                                      <button type="button" class="btn btn-success" data-dismiss="modal">Accepter</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>P2019 G2</td>
+                          <td>Sébastien</td>
+                          <td>Dancer-Michel</td>
+                          <td>14/03/16</td>
+                          <td>Ingiénerie informatique</td>
+                          <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
+                        </tr>
+                        <tr>
+                          <td>P2019 G2</td>
+                          <td>Sébastien</td>
+                          <td>Dancer-Michel</td>
+                          <td>14/03/16</td>
+                          <td>Ingiénerie informatique</td>
+                          <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
+                        </tr>
+                        <tr>
+                          <td>P2019 G2</td>
+                          <td>Sébastien</td>
+                          <td>Dancer-Michel</td>
+                          <td>14/03/16</td>
+                          <td>Ingiénerie informatique</td>
+                          <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
+                        </tr>
+                        <tr>
+                          <td>P2019 G2</td>
+                          <td>Sébastien</td>
+                          <td>Dancer-Michel</td>
+                          <td>14/03/16</td>
+                          <td>Ingiénerie informatique</td>
+                          <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
+                        </tr>
+
+                      </table>
+                    </div>
+
+                    <div class="tab-pane" id="historique" role="tabpanel">
                       <table class="table table-hover">
                         <thead>
                           <tr>
@@ -92,138 +182,48 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr class="table-success">
                             <td>P2019 G2</td>
-                            <td>Sébastien</td>
                             <td>Dancer-Michel</td>
-                            <td>14/03/16</td>
-                            <td>Ingiénerie informatique</td>
-                            <td>
-                              <button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button>
-                              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                      </button>
-                                      <h4 class="modal-title" id="myModalLabel">Absence - Sébastien Dancer-Michel</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                      <div><strong>Date :</strong> 14/03/16</div>
-                                      <div><strong>Heure :</strong> 9h - 12h</div>
-                                      <div><strong>Cours :</strong> Ingiénerie informatique</div>
-                                      <div><strong>Commentaire de l'intervenant concernant le cours :</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eius rerum veritatis beatae ducimus, vero deleniti cumque vitae distinctio.</div>
-                                      <div><strong>Justificatif :</strong>
-                                        <img src="https://unsplash.it/560/800/?random" class="img-fluid center-block" alt="justificatif">
-                                      </div>
-                                      <div><strong>Commentaire de l'élève :</strong>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam sit voluptatibus deserunt praesentium quibusdam rem doloremque repellat nihil eum totam autem facere officia eaque provident vitae, consequuntur iusto possimus aliquid.</p>
-                                      </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Rejeter</button>
-                                        <button type="button" class="btn btn-success" data-dismiss="modal">Accepter</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>P2019 G2</td>
                             <td>Sébastien</td>
-                            <td>Dancer-Michel</td>
                             <td>14/03/16</td>
                             <td>Ingiénerie informatique</td>
                             <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
                           </tr>
-                          <tr>
+                          <tr class="table-danger">
                             <td>P2019 G2</td>
-                            <td>Sébastien</td>
                             <td>Dancer-Michel</td>
+                            <td>Sébastien</td>
                             <td>14/03/16</td>
                             <td>Ingiénerie informatique</td>
                             <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
                           </tr>
-                          <tr>
+                          <tr class="table-success">
                             <td>P2019 G2</td>
-                            <td>Sébastien</td>
                             <td>Dancer-Michel</td>
+                            <td>Sébastien</td>
                             <td>14/03/16</td>
                             <td>Ingiénerie informatique</td>
                             <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
                           </tr>
-                          <tr>
+                          <tr class="table-success">
                             <td>P2019 G2</td>
-                            <td>Sébastien</td>
                             <td>Dancer-Michel</td>
+                            <td>Sébastien</td>
                             <td>14/03/16</td>
                             <td>Ingiénerie informatique</td>
                             <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
                           </tr>
-
-                        </table>
-                      </div>
-
-                      <div class="tab-pane" id="historique" role="tabpanel">
-                        <table class="table table-hover">
-                          <thead>
-                            <tr>
-                              <th>Promotion</th>
-                              <th>Nom de famille</th>
-                              <th>Prénom</th>
-                              <th>Date</th>
-                              <th>Cours</th>
-                              <th>Justificatif</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr class="table-success">
-                              <td>P2019 G2</td>
-                              <td>Dancer-Michel</td>
-                              <td>Sébastien</td>
-                              <td>14/03/16</td>
-                              <td>Ingiénerie informatique</td>
-                              <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
-                            </tr>
-                            <tr class="table-danger">
-                              <td>P2019 G2</td>
-                              <td>Dancer-Michel</td>
-                              <td>Sébastien</td>
-                              <td>14/03/16</td>
-                              <td>Ingiénerie informatique</td>
-                              <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
-                            </tr>
-                            <tr class="table-success">
-                              <td>P2019 G2</td>
-                              <td>Dancer-Michel</td>
-                              <td>Sébastien</td>
-                              <td>14/03/16</td>
-                              <td>Ingiénerie informatique</td>
-                              <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
-                            </tr>
-                            <tr class="table-success">
-                              <td>P2019 G2</td>
-                              <td>Dancer-Michel</td>
-                              <td>Sébastien</td>
-                              <td>14/03/16</td>
-                              <td>Ingiénerie informatique</td>
-                              <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
-                            </tr>
-                            <tr class="table-success">
-                              <td>P2019 G2</td>
-                              <td>Dancer-Michel</td>
-                              <td>Sébastien</td>
-                              <td>14/03/16</td>
-                              <td>Ingiénerie informatique</td>
-                              <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                          <tr class="table-success">
+                            <td>P2019 G2</td>
+                            <td>Dancer-Michel</td>
+                            <td>Sébastien</td>
+                            <td>14/03/16</td>
+                            <td>Ingiénerie informatique</td>
+                            <td><button type="button" class="btn btn-info btn-sm btn-block" data-toggle="modal" data-target="#myModal">Voir</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -232,12 +232,13 @@
           </div>
         </div>
       </div>
+    </div>
 
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      <script src="src/js/libs/tether.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-      <script src="src/js/libs/jquery.easy-pie-chart.js"></script>
-      <script src="src/js/app/script.js"></script>
-    </body>
-    </html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="src/js/libs/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="src/js/libs/jquery.easy-pie-chart.js"></script>
+    <script src="src/js/app/script.js"></script>
+  </body>
+  </html>
