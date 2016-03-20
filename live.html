@@ -8,7 +8,7 @@
   <title>HETIC Outils - Timme</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-  <link rel="stylesheet" href="../src/css/style.css">
+  <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
   <nav class="navbar navbar-dark bg-inverse">
@@ -106,105 +106,99 @@
                     <a class="nav-link" data-toggle="tab" href="#trombi" role="tab">Trombinoscope</a>
                   </li>
                 </ul>
+                <p class="absenteisme">Absents : 0/5 (0%)</p>
 
                 <div class="tab-content">
                   <!-- Feuille d'appel -->
-                  <div class="tab-pane active" id="appel" role="tabpanel">
-                    <p>Absents : 1/105 (~1%)</p>
-                    <div>
-                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Commentaires</button>
-                      <div class="collapse" id="collapseExample">
-                        <fieldset class="form-group">
-                          <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Ajoutez ici vos commentaires sur le déroulement du cours ..."></textarea>
-                        </fieldset>
-                      </div>
+                  <div class="tab-pane active" id="appel" role="tabpanel">                    <div>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Commentaires</button>
+                    <div class="collapse" id="collapseExample">
+                      <fieldset class="form-group">
+                        <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Grève de la RATP, tempête de neige, etc..."></textarea>
+                      </fieldset>
                     </div>
-                    <table class="table table-sm table-hover table-bordered">
-                      <thead class="thead-inverse">
-                        <tr>
-                          <th>#</th>
-                          <th>Nom de famille</th>
-                          <th>Prénom</th>
-                          <th>Présence</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr class="table-success">
-                          <th scope="row">1</th>
-                          <td>Marrast</td>
-                          <td>Aurélien</td>
-                          <td><button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">Toggle</button></td>
-                        </tr>
-                        <tr class="table-danger">
-                          <th scope="row">2</th>
-                          <td>Dancer-Michel</td>
-                          <td>Sébastien</td>
-                          <td><button type="button" class="btn btn-sm btn-secondary active" data-toggle="button" aria-pressed="true" autocomplete="off">Toggle</button></td>
-                        </tr>
-                        <tr class="table-success">
-                          <th scope="row">3</th>
-                          <td>Basset</td>
-                          <td>Camille</td>
-                          <td><button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">Toggle</button></td>
-                        </tr>
-                        <tr class="table-success">
-                          <th scope="row">4</th>
-                          <td>Morales</td>
-                          <td>Maeva</td>
-                          <td><button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">Toggle</button></td>
-                        </tr>
-                        <tr class="table-success">
-                          <th scope="row">5</th>
-                          <td>Lherm</td>
-                          <td>Jean-René</td>
-                          <td><button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">Toggle</button></td>
-                        </tr>
-                      </tbody>
-                    </table>
                   </div>
+                  <table class="table table-sm table-hover table-bordered">
+                    <thead class="thead-inverse">
+                      <tr>
+                        <th>#</th>
+                        <th>Nom de famille</th>
+                        <th>Prénom</th>
+                        <th>Présence</th>
+                        <th>Alertes</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="scenario-init">
+                        <th scope="row" row="1">1</th>
+                        <td>Basset</td>
+                        <td>Camille</td>
+                        <td><button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-row="1">Toggle</button></td>
+                        <td></td>
+                      </tr>
+                      <tr class="scenario-init">
+                        <th scope="row" row="2">2</th>
+                        <td>Dancer-Michel</td>
+                        <td>Sebastien</td>
+                        <td><button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-row="2">Toggle</button></td>
+                        <td></td>
+                      </tr>
+                      <tr class="scenario-init">
+                        <th scope="row" row="3">3</th>
+                        <td>Lherm</td>
+                        <td>Jean-René</td>
+                        <td><button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-row="3">Toggle</button></td>
+                        <td></td>
+                      </tr>
+                      <tr class="scenario-step2">
+                        <th scope="row" row="4">4</th>
+                        <td>Marrast</td>
+                        <td>Aurélien</td>
+                        <td><button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-row="4">Toggle</button></td>
+                        <td></td>
+                      </tr>
+                      <tr class="scenario-step1">
+                        <th scope="row" row="5">5</th>
+                        <td>Morales</td>
+                        <td>Maeva</td>
+                        <td><button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-row="5">Toggle</button></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
-                  <!-- trombinoscope -->
-                  <div class="tab-pane" id="trombi" role="tabpanel">
-                    <p>Absents : 1/105 (~1%)</p>
-                    <div class="row text-xs-center">
-                      <div class="col-sm-3">
-                        <div class="card card-block">
-                          <img src="https://unsplash.it/100/100/?random" alt="..." class="img-circle">
-                          <h5>Nom Prénom</h5>
-                          <button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">Toggle</button>
-                        </div>
+                <!-- trombinoscope -->
+                <div class="tab-pane" id="trombi" role="tabpanel">
+                  <div class="row text-xs-center">
+                    <div class="card-group">
+                      <div class="card card-block">
+                        <img src="https://unsplash.it/100/100/?random" alt="..." class="img-circle">
+                        <h5>Basset Camille</h5>
+                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-row="1">Toggle</button>
                       </div>
-                      <div class="col-sm-3">
-                        <div class="card card-block">
-                          <img src="https://unsplash.it/100/100/?random" alt="..." class="img-circle">
-                          <h5>Nom Prénom</h5>
-                          <button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">Toggle</button>
-                        </div>
+                      <div class="card card-block">
+                        <img src="https://unsplash.it/100/100/?random" alt="..." class="img-circle">
+                        <h5>Dancer-Michel Sebastien</h5>
+                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-row="2">Toggle</button>
                       </div>
-                      <div class="col-sm-3">
-                        <div class="card card-block">
-                          <img src="https://unsplash.it/100/100/?random" alt="..." class="img-circle">
-                          <h5>Nom Prénom</h5>
-                          <button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">Toggle</button>
-                        </div>
+                      <div class="card card-block">
+                        <img src="https://unsplash.it/100/100/?random" alt="..." class="img-circle">
+                        <h5>Lherm Jean-René</h5>
+                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-row="3">Toggle</button>
                       </div>
-                      <div class="col-sm-3">
-                        <div class="card card-block">
-                          <img src="https://unsplash.it/100/100/?random" alt="..." class="img-circle">
-                          <h5>Nom Prénom</h5>
-                          <button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">Toggle</button>
-                        </div>
+                      <div class="card card-block">
+                        <img src="https://unsplash.it/100/100/?random" alt="..." class="img-circle">
+                        <h5>Marrast Aurélien</h5>
+                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-row="4">Toggle</button>
                       </div>
-                      <div class="col-sm-3">
-                        <div class="card card-block">
-                          <img src="https://unsplash.it/100/100/?random" alt="..." class="img-circle">
-                          <h5>Nom Prénom</h5>
-                          <button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">Toggle</button>
-                        </div>
+                      <div class="card card-block">
+                        <img src="https://unsplash.it/100/100/?random" alt="..." class="img-circle">
+                        <h5>Morales Maeva</h5>
+                        <button type="button" class="btn btn-sm btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" data-row="5">Toggle</button>
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -213,12 +207,54 @@
       </div>
     </div>
   </div>
+</div>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="../src/js/libs/tether.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-  <script src="../src/js/libs/jquery.easy-pie-chart.js"></script>
-  <script src="../src/js/app/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="src/js/libs/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+<script src="src/js/libs/jquery.easy-pie-chart.js"></script>
+<script src="src/js/app/script.js"></script>
+<script>
+$(document).ready(function() {
+  var keyA = 65,
+      keyZ = 90,
+      keyE = 69,
+      KeyR = 82;
+  // init : -> turn Seb/JS/Cam rows green
+  $('.scenario-init').addClass('table-success');
+  // $('table button').on('click', function(){
+  //   var row = $(this).attr('data-row');
+  //   console.log(row);
+  //   $('table tr[row=row]').toggleClass('table-success');
+  //   $('table tr[row=row]').toggleClass('table-danger');
+  // });
+
+  // update 1 : Maeva (eleve) badge -> turn row green
+  $(document).on('keydown', function(e) {
+    var press = e.keyCode;
+    if (press === keyA) {
+      $('.scenario-step1').addClass('table-success');
+    }
+  });
+
+  // update 2 : Seb (prof) badge -> turn other rows red
+  $(document).on('keydown', function(e) {
+    var press = e.keyCode;
+    if (press === keyZ) {
+      $('.scenario-step2').addClass('table-danger');
+      $('.absenteisme').text('Absents : 1/5 (20%)');
+    }
+  });
+
+  // update 3 : Aurelien badge -> only pops up an alert
+  $(document).on('keydown', function(e) {
+    var press = e.keyCode;
+    if (press === keyE) {
+      $('.scenario-step2 td:last-of-type').html('<span class="label label-pill label-warning">a badgé après l\'appel</span>');
+    }
+  });
+});
+</script>
 </body>
 </html>
