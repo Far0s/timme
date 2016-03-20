@@ -1,0 +1,60 @@
+body {
+  background: #eee;
+  font-family: Helvetica, Arial;
+  font-size: 14px;
+}
+
+
+/* Pie chart styles */
+.chart {
+  display: inline-block;
+  width: 110px;
+  margin: 40px auto 20px;
+  padding: 0 10px;
+}
+
+.easyPieChart {
+  position: relative;
+  text-align: center;
+}
+.easyPieChart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.percentage {
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-weight: 100;
+}
+
+.main-navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+  background: #262C34;
+}
+
+.main-navbar .pull-xs-right {
+  margin-left: auto;
+}
+
+.main-navbar a {
+  margin-right: 30px;
+  vertical-align: middle;
+}
+
+.main-navbar div:first-of-type {
+  font-size: 18px;
+}
+
+.main-navbar img {
+  margin-right: 10px;
+}
+
+h1 {
+  margin: 30px 0;
+  font-size: 24px;
+}

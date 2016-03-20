@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>HETIC Outils - Timme</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-inverse main-navbar">
+    <div class="nav navbar-nav">
+      <a class="navbar-brand" href="#"><img src="src/images/logo_vert_fonce.png" alt="Logo HETIC"></a>
+      <a class="nav-item nav-link" href="#"><img src="src/images/icone_intranet.png" alt="Intranet">Intranet</a>
+      <a class="nav-item nav-link" href="#"><img src="src/images/icone_OGP.png" alt="Intranet">OGP</a>
+      <a class="nav-item nav-link" href="#"><img src="src/images/icone_OGI.png" alt="Intranet">OGI</a>
+      <a class="nav-item nav-link active" href="#">Timme<span class="sr-only">(current)</span></a>
+    </div>
+    <div class="nav navbar-nav pull-xs-right">
+      <a class="nav-item nav-link" href="#">Sébastien Dancer-Michel - Editer mon profil</a>
+      <a class="nav-item nav-link" href="#">Déconnexion</a>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Left sidebar -->
+      <div class="col-md-3">
+        <!-- Search -->
+        <div class="card">
+          <div class="card-header">Rechercher</div>
+          <div class="card-block">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="php, montage, marketing...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">Go!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="card text-xs-center">
+          <div class="card-header">
+            Aurélien Marrast
+          </div>
+
+          <div class="card-block">
+            <p class="card-text">Né le 31/08/1996</p>
+            <p class="card-text">H2 P2019</p>
+          </div>
+
+          <div class="card-block text-xs-left">
+            <p class="card-text text-muted">Liste des absences</p>
+            <div id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      13/02/15 - Ingiénerie informatique (9-12h)
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <a href="#" class="btn btn-primary btn-danger">12 heures 26 minutes</a>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      13/02/15 - Developpement Web (14-17h)
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <a href="#" class="btn btn-warning">1 jour 20 heures</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main container -->
+      <div class="col-md-9">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Sub navbar - for Timme categories -->
+            <nav class="navbar navbar-light bg-faded">
+              <div class="nav navbar-nav">
+                <a class="nav-item nav-link" href="index.html">Emploi du temps <span class="sr-only">(current)</span></a>
+                <div class="nav-item btn-group">
+                  <a class="dropdown-toggle nav-link active" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mes absences
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item active" href="#">A justifier</a>
+                    <a class="dropdown-item" href="absences-historique.html">Historique</a>
+                  </div>
+                </div>
+                <a class="nav-item nav-link" href="absences-stats.html">Mes statistiques</a>
+              </div>
+            </nav>
+
+            <div class="container-fluid">
+              <div class="row">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">A justifier</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="absences-historique.html">Historique</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="card-deck-wrapper">
+                  <div class="card-deck">
+                    <div class="card card-warning card-inverse">
+                      <div class="card-block">
+                        <h4 class="card-title">14 Mars 2016</h4>
+                        <p class="card-text">Ingiénerie informatique (9 - 12h)</p>
+                        <p class="card-text"><small>Il vous reste 1 jour 2 heures 12 minutes pour fournir un justificatif.</small></p>
+                        <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#myModal1">Justifier</a>
+                      </div>
+                      <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header text-xs-center">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                              <h4 class="modal-title" id="myModalLabel">Justifier une absence</h4>
+                              <h5>Ingiénerie informatique - 14 Mars 2016</h5>
+                            </div>
+                            <div class="modal-body">
+                              <fieldset class="form-group">
+                                <label for="exampleTextarea">Laissez un message à l'administration</label>
+                                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                              </fieldset>
+                              <fieldset class="form-group">
+                                <label for="exampleInputFile">Joignez votre justificatif (certificat médical, bulletin de la RATP, etc.)</label>
+                                <input type="file" class="form-control-file" id="exampleInputFile">
+                              </fieldset>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                              <button type="button" class="btn btn-primary">Envoyer</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card card-danger card-inverse">
+                      <div class="card-block">
+                        <h4 class="card-title">3 Mars 2016</h4>
+                        <p class="card-text">Communication des entreprises (13 - 16h)</p>
+                        <p class="card-text"><small>Il vous reste 23 heures 36 minutes pour fournir un justificatif.</small></p>
+                        <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">Justifier</a>
+                      </div>
+                      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header text-xs-center">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                              <h4 class="modal-title" id="myModalLabel">Justifier une absence</h4>
+                              <h5>Communication des entreprises - 3 Mars 2016</h5>
+                            </div>
+                            <div class="modal-body">
+                              <fieldset class="form-group">
+                                <label for="exampleTextarea">Laissez un message à l'administration</label>
+                                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                              </fieldset>
+                              <fieldset class="form-group">
+                                <label for="exampleInputFile">Joignez votre justificatif (certificat médical, bulletin de la RATP, etc.)</label>
+                                <input type="file" class="form-control-file" id="exampleInputFile">
+                              </fieldset>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                              <button type="button" class="btn btn-primary">Envoyer</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card card-danger card-inverse">
+                      <div class="card-block">
+                        <h4 class="card-title">3 Mars 2016</h4>
+                        <p class="card-text">Expertise - C4D (9 - 12h)</p>
+                        <p class="card-text"><small>Il vous reste 19 heures 49 minutes pour fournir un justificatif.</small></p>
+                        <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#myModal3">Justifier</a>
+                      </div>
+                      <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header text-xs-center">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                              <h4 class="modal-title" id="myModalLabel">Justifier une absence</h4>
+                              <h5>Expertise - C4D - 3 Mars 2016</h5>
+                            </div>
+                            <div class="modal-body">
+                              <fieldset class="form-group">
+                                <label for="exampleTextarea">Laissez un message à l'administration</label>
+                                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                              </fieldset>
+                              <fieldset class="form-group">
+                                <label for="exampleInputFile">Joignez votre justificatif (certificat médical, bulletin de la RATP, etc.)</label>
+                                <input type="file" class="form-control-file" id="exampleInputFile">
+                              </fieldset>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                              <button type="button" class="btn btn-primary">Envoyer</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+  <script src="src/js/app/script.js"></script>
+</body>
+</html>
